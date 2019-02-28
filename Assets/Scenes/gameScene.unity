@@ -113,7 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &204160888
+--- !u!1001 &1183901557
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -150,11 +150,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4359286666159510, guid: 63609c45d8b55bd4cb87a1f7eb59bfd8, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63609c45d8b55bd4cb87a1f7eb59bfd8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1183901558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1791872886571668, guid: 63609c45d8b55bd4cb87a1f7eb59bfd8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1183901557}
 --- !u!1 &1534605121
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +247,7 @@ GameObject:
   - component: {fileID: 1928973501}
   - component: {fileID: 1928973500}
   - component: {fileID: 1928973502}
+  - component: {fileID: 1928973503}
   m_Layer: 0
   m_Name: Network
   m_TagString: Untagged
@@ -277,7 +283,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1928973502
 MonoBehaviour:
@@ -292,3 +298,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 1311356686415134, guid: da05f9e68dee20b42896849a57a1efc5,
     type: 2}
+  spawner: {fileID: 1928973503}
+--- !u!114 &1928973503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928973499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415a4bbd6e12c2b4e8e0d6c284446f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localPlayer: {fileID: 1183901558}
+  playerPrefab: {fileID: 1311356686415134, guid: da05f9e68dee20b42896849a57a1efc5,
+    type: 2}
+  socket: {fileID: 1928973500}

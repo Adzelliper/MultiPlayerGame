@@ -12,7 +12,7 @@ public class PlayerMovementNetwork : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void FixedUpdate () {
-        transform.Rotate(0,0, h * 100f * Time.deltaTime);
+        transform.Rotate(0,0, -h * 100f * Time.deltaTime);
 
         if (v > 0)
         {

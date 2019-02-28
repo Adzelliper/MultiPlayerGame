@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        transform.Rotate(0,0, Input.GetAxisRaw("Horizontal") * 100f * Time.deltaTime);
+        transform.Rotate(0,0, -Input.GetAxisRaw("Horizontal") * 100f * Time.deltaTime);
 
         if (Input.GetAxisRaw("Vertical") > 0)
         {
