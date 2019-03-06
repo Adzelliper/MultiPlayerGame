@@ -23,6 +23,6 @@ public class PlayerMovementNetwork : MonoBehaviour {
         {
             rb2d.velocity = Vector2.zero;
         }
-        Network.Move(v, h);
+        //Network.Move(v, h);
     }
 }

@@ -22,19 +22,27 @@ public class Network : MonoBehaviour {
         socket.On("disconnected", OnDisconnected);
         socket.On("register", OnRegister);
         socket.On("updatePosition", OnUpdatePosition);
+        socket.On("requestPosition", OnRequestPosition);
+    }
+
+    private void OnRequestPosition(SocketIOEvent obj)
+    {
+        socket.Emit("updatePosition", PosToJson(spawner.localPlayer.transform.position, spawner.localPlayer.transform.rotation.eulerAngles.z));
     }
 
     private void OnUpdatePosition(SocketIOEvent obj)
     {
         Debug.Log("Updating positions " + obj.data);
 
-        var v = float.Parse(obj.data["v"].ToString().Replace("\"", ""));
-        var h = float.Parse(obj.data["h"].ToString().Replace("\"", ""));
+        //var v = float.Parse(obj.data["v"].ToString().Replace("\"", ""));
+        //var h = float.Parse(obj.data["h"].ToString().Replace("\"", ""));
+        var position = MakePosFromJson(obj);
         var player = spawner.findPlayer(obj.data["id"].ToString());
+        var rotation = obj.data["rotz"].n;
 
-        var playerMover = player.GetComponent<PlayerMovementNetwork>();
-        playerMover.v = v;
-        playerMover.h = h;
+        player.transform.position = position;
+        player.transform.eulerAngles = new Vector3(0,0,rotation);
+       
     }
 
     private void OnRegister(SocketIOEvent obj)
@@ -56,7 +64,7 @@ public class Network : MonoBehaviour {
     {
         //Debug.Log("Player Moving" + obj.data);
         var id = obj.data["id"].ToString().Replace("\"", "");
-        Debug.Log(id);
+        //Debug.Log(id);
 
         var v = float.Parse(obj.data["v"].ToString().Replace("\"",""));
         var h = float.Parse(obj.data["h"].ToString().Replace("\"",""));
@@ -98,6 +106,21 @@ public class Network : MonoBehaviour {
     {
 
         return string.Format(@"{{""v"":""{0}"",""h"":""{1}""}}", dirV, dirH);
+    }
+
+    public static JSONObject PosToJson(Vector3 pos, float rotz)
+    {
+        JSONObject jpos = new JSONObject(JSONObject.Type.OBJECT);
+        jpos.AddField("x", pos.x);
+        jpos.AddField("y", pos.y);
+        jpos.AddField("z", pos.z);
+        jpos.AddField("rotz", rotz);
+        return jpos;
+    }
+
+    public static Vector3 MakePosFromJson(SocketIOEvent e)
+    {
+        return new Vector3(e.data["x"].n, e.data["y"].n, e.data["z"].n);
     }
 }
 

@@ -22,17 +22,19 @@ public class SpawnerScript : MonoBehaviour {
 
     public void AddPlayer(string id, GameObject player)
     {
+        id = id.Replace("\"", "");
         players.Add(id, player);
     }
 
     public GameObject findPlayer(string id)
     {
-
+        id = id.Replace("\"", "");
         return players[id];
     }
 
     public void RemovePlayer(string id)
     {
+        id = id.Replace("\"", "");
         var player = players[id];
         Destroy(player);
         players.Remove(id);
