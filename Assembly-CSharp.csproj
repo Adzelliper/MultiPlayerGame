@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Network.cs" />
     <Compile Include="Assets\Scripts\NetworkEntity.cs" />
+    <Compile Include="Assets\Scripts\NetworkInput.cs" />
     <Compile Include="Assets\Scripts\NetworkMove.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementNetwork.cs" />
