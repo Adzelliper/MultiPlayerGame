@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/001387745/MultiPlayerGame/Build/MultiPlayerGame.exe
+C:/Users/adzel/OneDrive/Desktop/MultiPlayerGame/Build/MultiPlayerGame.exe
 SceneListBegin?
 Assets/Scenes/gameScene.unity
 SceneListEnd?
@@ -123,6 +123,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
+a2d3ec39000d5cc55a1cf7b24b8dde58 Assembly-CSharp.dll:.Points
 ed9c5652d1502112adc40e1e97ff84d5 Assembly-CSharp.dll:.NetworkEntity
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -166,10 +167,12 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+8a7ac9bde1c5108f6442265d4a9773a8 Assembly-CSharp.dll:.CoinSpawn
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 3b4d80f93d2ec4a003f31a95667afcdf Assembly-CSharp.dll:.SpawnerScript
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
+cbd69adf556db15dd3b57d0e810abb4f Assembly-CSharp.dll:.NetworkInput
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.TestSocketIO
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.NetworkMove

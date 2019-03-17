@@ -36,9 +36,17 @@ public class SpawnerScript : MonoBehaviour {
     {
         id = id.Replace("\"", "");
         var player = players[id];
+        Debug.Log("Score Requested" + players[id].GetComponent<Points>().points.ToString());
         Destroy(player);
         players.Remove(id);
 
     }
+
+    public int UpdateScore(string id, int score)
+    {
+        id = id.Replace("\"", "");
+        return players[id].GetComponent<Points>().points;
+    }
+
 
 }
